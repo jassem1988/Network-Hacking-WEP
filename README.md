@@ -1,7 +1,7 @@
 # Network Hacking (WEP)
 
 ## Objective
-Network Hacking and gaining access to WEP networks and cracking them.
+Network Hacking and gaining access to WEP encryption networks and cracking them.
 
 ### Skills Learned
 
