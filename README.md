@@ -1,7 +1,7 @@
 # Network Hacking (wifi)
 
 ## Objective
-Network Hacking and gaining access to WEP encryption networks and cracking them.
+Network Hacking and gaining access to Wifi networks and cracking them.
 
 ### Skills Learned
 
