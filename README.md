@@ -19,8 +19,11 @@ Network Hacking and gaining access to WEP encryption networks and cracking them.
 ## Steps for WAP
 
 - Changing the wireless USB mode to monitoring
-<img width="411" alt="Pasted Graphic 7" src="https://github.com/user-attachments/assets/331fc412-c14a-43f9-92cd-9d5e0591ece8" />
-
+```bash
+ifconfig wlan0 down
+iwconfig wlan0 mode monitor
+ifconfig wlan0 up
+```
 
 The mode will be Monitor now
 - Sniffing on 5G and 2.4G networks and find the network with the cipher WEP
