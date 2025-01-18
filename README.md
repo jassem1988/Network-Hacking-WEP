@@ -1,4 +1,4 @@
-# Network Hacking (WEP)
+# Network Hacking (wifi)
 
 ## Objective
 Network Hacking and gaining access to WEP encryption networks and cracking them.
@@ -16,7 +16,8 @@ Network Hacking and gaining access to WEP encryption networks and cracking them.
 - airodump-ng
 - aircrack-ng
 
-## Steps
+## Steps for WAP
+
 - Changing the wireless USB mode to monitoring
 <img width="411" alt="Pasted Graphic 7" src="https://github.com/user-attachments/assets/331fc412-c14a-43f9-92cd-9d5e0591ece8" />
 
@@ -36,5 +37,6 @@ The mode will be Monitor now
 
 - Copy the key and remove the : and that would be the wifi password.
 
+## Steps for WPA/WPA2
 
 ￼
