@@ -19,7 +19,7 @@ Network Hacking and gaining access to Wifi networks and cracking them.
 - aireplay-ng
 - Crunch
 
-## Steps for WAP
+### Steps for WAP
 
 - Changing the wireless USB mode to monitoring
 ```bash
@@ -47,7 +47,7 @@ aircrack-ng test.cap
 ```
 - Copy the key and remove the : and that would be the wifi password.
 
-## Steps for WPA/WPA2
+### Steps for WPA/WPA2
 
 **Works for some routers with WPS**
 - Changing the wireless USB mode to monitoring
