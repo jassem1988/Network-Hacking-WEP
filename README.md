@@ -74,7 +74,10 @@ reaver --bssid 78:67:0E:31:4C:42 --channel 1 --interface wlan0 -vvv --no-associa
 
 **Method for capturing handshake**
 
-1. Find the BSSID of the network with ifconfig
+1. Sniff on 5G and 2.4G networks and find the network with WPA/WPA2 and get the BSSID
+```bash
+airdump-ng --band abg wlan0
+```
 2. Write a file via **airodump-ng**.
 ```bash
 airodump-ng --bssid 30:DE:4B:AD:CC:8A --channel 161 --write wpa_handshake wlan0 
