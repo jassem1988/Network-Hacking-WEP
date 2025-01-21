@@ -47,7 +47,8 @@ aircrack-ng test.cap
 ```
 5. Copy the key and remove the : and that would be the wifi password.
 
-> If the network is not busy we need to follow the steps below: -
+**If the network is not busy we need to follow the steps below: -**
+
 1. We need to capture data from the WEP network and write it in a file.
 ```bash
  airodump-ng --bssid B4:75:0E:36:6A:9E --channel 11 --write basic_wep wlan0
