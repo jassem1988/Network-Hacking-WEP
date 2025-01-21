@@ -121,7 +121,6 @@ aireplay-ng --deauth 4 -a 30:DE:4B:AD:CC:8A -c EE:7B:BE:70:D6:1F wlan0
 crunch 1 3 abc123 -o test_wordlist.txt
 cat test_worklist.txt
 ```
-- 
 
 
 ￼
