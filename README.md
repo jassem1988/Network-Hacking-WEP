@@ -2,8 +2,7 @@
 
 ## Objective
 
-Finding weaknesses in Wifi networks with different encryption types. Finding the weakness of WEP networks.
-Finding weak passwords on WPA/WPA2 networks
+Finding weaknesses in Wifi networks and exploiting vulnerabilities in their encryption protocols (e.g., WEP, WPA, WPA2).
 
 
 ### Skills Learned
