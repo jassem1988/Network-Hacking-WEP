@@ -1,11 +1,13 @@
 # Wireless Network Penetration Testing
 
 ## Objective
-Network Hacking and gaining access to Wifi networks and cracking them.
+
+Finding weaknesses in Wifi networks with different encryption types. Finding the weakness of WEP networks. 
+
 
 ### Skills Learned
 
-- Sniffing on 5Gz and 2.5Gz wireless networks
+- Finding 5Gz and 2.5Gz wireless networks around me
 - aircrack-ng
   
 
