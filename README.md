@@ -33,12 +33,12 @@ ifconfig wlan0 up
 
 >The mode will be Monitor now
 
-1. Sniffing on 5G and 2.4G networks and find the network with the cipher WEP
+1. Finding the 5G and 2.4G networks and find the network with the cipher WEP
 ```bash
 airdump-ng --band abg wlan0
 ```
 
-2. Sniffing packets from the network with the WEP cipher with the specific MAC and channel number and save the results in a file test
+2. Find packets from the network with the WEP cipher with the specific MAC and channel number and save the results in a file test
 ```bash
 airodump-ng --bssid 03:DE:4B:AD:CC:8B --channel 9 --write test mon0
 ```
@@ -103,7 +103,7 @@ reaver --bssid 78:67:0E:31:4C:42 --channel 1 --interface wlan0 -vvv --no-associa
 
 **Method for capturing handshake**
 
-1. Sniff on 5G and 2.4G networks and find the network with WPA/WPA2 and get the BSSID
+1. Find on 5G and 2.4G networks and find the network with WPA/WPA2 and get the BSSID
 ```bash
 airdump-ng --band abg wlan0
 ```
