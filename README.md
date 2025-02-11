@@ -157,6 +157,13 @@ sudo airmon-ng check kill
 sudo airmon-ng start wlan0
 ```
 
+- We scan for the wifi networks.
+```bash
+sudo airmon-ng check kill
+```
+
+- Save the BSSID and Channel and ESSID
+
 
 
 
