@@ -142,7 +142,23 @@ wifi.deauth <SSID of the wifi network>
 ```
 
 - We wait until we see hanshakes are captured by bettercap
-- 
+
+### Another way to find weaknesses  WPA2 /WPA3 (Handshakes)
+
+- **ip addr** to show the IP address of the Wlan0 network for the wifi adapter.
+- **iw dev** to show the wifi adapter and the mode its in.
+- We will kill all processes
+```bash
+sudo airmon-ng check kill
+```
+
+- We then start the wifi adapter to change it to monitor mode.
+```bash
+sudo airmon-ng start wlan0
+```
+
+
+
 
  
 ￼
